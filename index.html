@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>The Instaprofit System — Turn Instagram Into a Profit Machine</title>
+  <meta name="description" content="The Instaprofit System is a step-by-step program that helps you grow, monetize, and scale Instagram into a consistent income stream — even from zero." />
+  <meta property="og:title" content="The Instaprofit System" />
+  <meta property="og:description" content="Turn Instagram into a profit machine with our step-by-step system." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://via.placeholder.com/1200x630.png?text=The+Instaprofit+System" />
+  <meta name="theme-color" content="#0ea5e9" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Russo+One&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html { scroll-behavior: smooth; }
+    .headline { font-family: 'Russo One', system-ui, sans-serif; }
+    .bodyfont { font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, 'Apple Color Emoji', 'Segoe UI Emoji', sans-serif; }
+    .glass { backdrop-filter: blur(10px); background: rgba(255,255,255,0.08); }
+    /* Style for the countdown timer */
+    .countdown-timer {
+      display: flex;
+      justify-content: center;
+      gap: 0.5rem; /* Reduced gap for smaller size */
+      font-family: 'Russo One', system-ui, sans-serif;
+    }
+    .countdown-timer .box {
+      background-color: rgba(2, 6, 23, 0.5);
+      padding: 0.25rem 0.5rem; /* Reduced padding */
+      border-radius: 0.5rem;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      text-align: center;
+    }
+    .countdown-timer .box .number {
+      font-size: 1.5rem; /* Smaller font size */
+      line-height: 1;
+      color: #0ea5e9;
+    }
+    .countdown-timer .box .label {
+      font-size: 0.6rem; /* Smaller font size */
+      text-transform: uppercase;
+      color: #94a3b8;
+    }
+  </style>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230ea5e9'/><text x='50' y='60' text-anchor='middle' font-size='60' fill='white'>I</text></svg>">
+  <!-- Product + FAQ Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "The Instaprofit System",
+    "description": "A step-by-step system to grow, monetize and scale Instagram into a consistent income stream.",
+    "brand": {"@type": "Brand", "name": "Instaprofit"},
+    "image": "https://via.placeholder.com/1200x630.png?text=The+Instaprofit+System",
+    "sku": "IPS-001",
+    "offers": {
+      "@type": "Offer",
+      "priceCurrency": "USD",
+      "price": "14.99",
+      "availability": "https://schema.org/InStock",
+      "url": "#checkout"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "143"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {"@type":"Question","name":"Do I need prior experience?","acceptedAnswer":{"@type":"Answer","text":"No. The Instaprofit System is beginner-friendly with step-by-step guidance."}},
+      {"@type":"Question","name":"How fast can I see results?","acceptedAnswer":{"@type":"Answer","text":"Results vary by effort and niche, but many students see measurable growth within weeks."}},
+      {"@type":"Question","name":"Do I need a budget?","acceptedAnswer":{"@type":"Answer","text":"No. The core system focuses on organic strategies and free tools."}},
+      {"@type":"Question","name":"Is there a refund policy?","acceptedAnswer":{"@type":"Answer","text":"Yes. We offer a 14-day money-back guarantee if you’re not satisfied."}}
+    ]
+  }
+  </script>
+</head>
+<body class="bodyfont bg-slate-950 text-slate-100">
+  <!-- Announcement / Scarcity Bar -->
+  <div class="w-full bg-gradient-to-r from-cyan-500 to-blue-600">
+    <div class="max-w-6xl mx-auto px-4 py-2 text-center text-sm font-semibold flex flex-col sm:flex-row justify-center items-center gap-2 text-white">
+      <!-- Changed to badges for better visual hierarchy -->
+      <span class="bg-[#FF3131] text-white px-2 py-0.5 rounded-full font-bold">⏳ 85% OFF</span>
+      <span>Ends When the Timer Hits Zero</span>
+      <span class="bg-[#FFB000] text-slate-900 px-2 py-0.5 rounded-full font-bold">DON’T MISS OUT!</span>
+      <!-- Scarcity Timer Container -->
+      <div id="countdown" class="countdown-timer">
+        <!-- Timer will be injected here by JavaScript -->
+      </div>
+    </div>
+  </div>
+  <!-- Header -->
+  <header class="sticky top-0 z-40 bg-slate-950/70 backdrop-blur border-b border-white/10">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="h-9 w-9 rounded-2xl bg-gradient-to-br from-cyan-500 to-blue-600 grid place-items-center font-black text-slate-900">I</div>
+        <span class="headline text-lg tracking-wide">The Instaprofit System</span>
+      </div>
+      <nav class="hidden md:flex items-center gap-6 text-sm text-slate-300">
+        <a href="#features" class="hover:text-white">Features</a>
+        <a href="#curriculum" class="hover:text-white">What You Get</a>
+        <a href="#testimonials" class="hover:text-white">Results</a>
+        <a href="#pricing" class="hover:text-white">Pricing</a>
+        <a href="#faq" class="hover:text-white">FAQ</a>
+      </nav>
+      <a href="#checkout" class="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 px-4 py-2 font-semibold text-slate-900 shadow-lg shadow-cyan-500/20 hover:scale-[1.02] transition">
+        Get Instant Access
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 h-4"><path fill="currentColor" d="M13 5l7 7-7 7v-4H4v-6h9V5z"/></svg>
+      </a>
+    </div>
+  </header>
+  <!-- Hero -->
+  <section class="relative overflow-hidden">
+    <div class="absolute inset-0 -z-10 bg-[radial-gradient(60%_60%_at_50%_0%,rgba(14,165,233,0.25),rgba(2,6,23,0.1)_60%,transparent_80%)]"></div>
+    <div class="max-w-6xl mx-auto px-4 py-16 md:py-24 grid md:grid-cols-2 gap-10 items-center">
+      <div>
+        <h1 class="headline text-4xl md:text-6xl leading-tight">
+          Turn Instagram Into a <span class="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">Profit Machine</span>
+        </h1>
+        <p class="mt-5 text-lg text-slate-300">A proven, beginner-friendly system to grow your audience and convert followers into buyers — no ads, no fluff, just step-by-step execution.</p>
+        <ul class="mt-6 space-y-2 text-slate-300">
+          <li class="flex gap-3"><span class="text-cyan-400">✔</span> Organic growth strategies that actually work in 2025</li>
+          <li class="flex gap-3"><span class="text-cyan-400">✔</span> Ready-to-post content frameworks & strategies</li>
+          <li class="flex gap-3"><span class="text-cyan-400">✔</span> Monetize with affiliate products & digital offers</li>
+        </ul>
+        <div class="mt-8 flex flex-col sm:flex-row gap-3">
+          <a href="#checkout" class="inline-flex justify-center items-center gap-2 rounded-2xl bg-gradient-to-r from-cyan-500 to-blue-600 px-6 py-4 text-lg font-semibold text-slate-900 shadow-xl shadow-cyan-500/20">
+            Get The Instaprofit System
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-5 h-5"><path fill="currentColor" d="M13 5l7 7-7 7v-4H4v-6h9V5z"/></svg>
+          </a>
+          <a href="#curriculum" class="inline-flex justify-center items-center rounded-2xl border border-white/15 px-6 py-4 text-lg font-semibold hover:bg-white/5">See what's inside</a>
+        </div>
+        <div class="mt-5 text-sm text-slate-400">⚡ Instant access · 🔒 Secure checkout · ♾️ Lifetime updates</div>
+      </div>
+      <div class="relative">
+        <div class="absolute -inset-4 bg-gradient-to-tr from-cyan-500/20 to-blue-600/20 blur-2xl rounded-3xl"></div>
+        <div class="relative glass rounded-3xl border border-white/10 p-5">
+          <a href="https://freeimage.host/i/K2c3y9p"><img src="https://iili.io/K2c3y9p.png" alt="K2c3y9p.png" border="0"></a>
+          <div class="mt-4 grid grid-cols-2 gap-3 text-xs text-slate-300">
+            <div class="glass rounded-xl border border-white/10 p-3">Detail Growth Guide</div>
+            <div class="glass rounded-xl border border-white/10 p-3">Content That Converts</div>
+            <div class="glass rounded-xl border border-white/10 p-3">100 Hooks Pack</div>
+            <div class="glass rounded-xl border border-white/10 p-3">Monetization Blueprint</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Pain Points / Agitation -->
+  <section class="py-16 md:py-24 border-t border-white/10" id="problems">
+    <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-3 gap-6">
+      <div class="md:col-span-1">
+        <h2 class="headline text-3xl md:text-4xl">Struggling to Monetize Instagram?</h2>
+        <p class="mt-3 text-slate-300">If you’re posting but not profiting, it’s not your fault. You just need a clear playbook.</p>
+      </div>
+      <div class="md:col-span-2 grid sm:grid-cols-2 gap-4">
+        <div class="rounded-2xl p-5 border border-white/10 bg-white/5">Posting daily with no growth</div>
+        <div class="rounded-2xl p-5 border border-white/10 bg-white/5">Confused about what to sell</div>
+        <div class="rounded-2xl p-5 border border-white/10 bg-white/5">No idea how to convert followers</div>
+        <div class="rounded-2xl p-5 border border-white/10 bg-white/5">Wasting hours on trends & hacks</div>
+      </div>
+    </div>
+  </section>
+  <!-- Features / Solution -->
+  <section class="py-16 md:py-24" id="features">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="headline text-3xl md:text-4xl text-center">A Proven System That Actually Works</h2>
+      <p class="mt-3 text-center text-slate-300 max-w-3xl mx-auto">Follow a step-by-step roadmap to grow your audience, create content that converts, and monetize with affiliates or your own digital offers.</p>
+      <div class="mt-10 grid md:grid-cols-3 gap-6">
+        <div class="rounded-2xl border border-white/10 p-6 bg-gradient-to-b from-white/5 to-transparent">
+          <div class="text-cyan-400 mb-3">📈</div>
+          <h3 class="font-semibold text-lg">Organic Growth Engine</h3>
+          <p class="mt-2 text-slate-300">Dial in your niche, profile, hooks, and posting Consistent to attract targeted followers fast.</p>
+        </div>
+        <div class="rounded-2xl border border-white/10 p-6 bg-gradient-to-b from-white/5 to-transparent">
+          <div class="text-cyan-400 mb-3">🧠</div>
+          <h3 class="font-semibold text-lg">Content That Converts</h3>
+          <p class="mt-2 text-slate-300">Plug-and-play frameworks & Reels that designed to trigger shares and DMs.</p>
+        </div>
+        <div class="rounded-2xl border border-white/10 p-6 bg-gradient-to-b from-white/5 to-transparent">
+          <div class="text-cyan-400 mb-3">💰</div>
+          <h3 class="font-semibold text-lg">Monetization Blueprint</h3>
+          <p class="mt-2 text-slate-300">Affiliate offers, step-by-step Guide that help to turn attention into predictable revenue.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- What You Get / Curriculum -->
+  <section class="py-16 md:py-24 border-t border-white/10" id="curriculum">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="headline text-3xl md:text-4xl text-center">What You’ll Get Inside</h2>
+      <div class="mt-10 grid lg:grid-cols-2 gap-6">
+        <div class="rounded-2xl border border-white/10 p-6 bg-white/5">
+          <h3 class="font-semibold text-lg">Module 1 — Instagram Growth Blueprint</h3>
+          <p class="mt-2 text-slate-300">Positioning, profile optimization, content pillars, and growth strategies.</p>
+        </div>
+        <div class="rounded-2xl border border-white/10 p-6 bg-white/5">
+          <h3 class="font-semibold text-lg">Module 2 — Content That Converts</h3>
+          <p class="mt-2 text-slate-300">Hook library, Dms scripts, Ready to post Reel, and CTA vault.</p>
+        </div>
+        <div class="rounded-2xl border border-white/10 p-6 bg-white/5">
+          <h3 class="font-semibold text-lg">Module 3 — Affiliate Monetization</h3>
+          <p class="mt-2 text-slate-300">Find high-commission offers, and DM scripts that sell ethically.</p>
+        </div>
+        <div class="rounded-2xl border border-white/10 p-6 bg-white/5">
+          <h3 class="font-semibold text-lg">Module 4 — Scaling to Consistent Income</h3>
+          <p class="mt-2 text-slate-300">Systems, analytics, content batching, and insane bonuses.</p>
+        </div>
+      </div>
+      <div class="mt-8 grid sm:grid-cols-2 lg:grid-cols-4 gap-4 text-sm text-slate-300">
+        <div class="glass rounded-2xl border border-white/10 p-4">🎁 Bonus: 1800+ Ready to post reels</div>
+        <div class="glass rounded-2xl border border-white/10 p-4">🗂️ Bonus: Dm scripts & Hooks pack</div>
+        <div class="glass rounded-2xl border border-white/10 p-4">📚 Bonus: Faceless content creation course</div>
+        <div class="glass rounded-2xl border border-white/10 p-4">🤝 Bonus: Ai masterclass</div>
+      </div>
+    </div>
+  </section>
+  <!-- Testimonials -->
+  <section class="py-16 md:py-24" id="testimonials">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="headline text-3xl md:text-4xl text-center">Real People. Real Results.</h2>
+      <p class="mt-3 text-center text-slate-300"> Reviews from students who implemented the system.</p>
+      <div class="mt-10 grid md:grid-cols-3 gap-6">
+        <!-- Testimonial 1 (From Image) -->
+        <figure class="rounded-2xl border border-white/10 p-6 bg-white/5">
+          <blockquote class="text-slate-200">“OMG! I launched my faceless IG system and made $45K in just 2 months 🤯 I had zero experience before this — crazy journey so far!”</blockquote>
+          <figcaption class="mt-4 text-sm text-slate-400">— Emily A.</figcaption>
+        </figure>
+        <!-- Testimonial 2 (From Image) -->
+        <figure class="rounded-2xl border border-white/10 p-6 bg-white/5">
+          <blockquote class="text-slate-200">“I've tried dropshipping and freelancing... nothing worked. But this method finally clicked for me. Results in just one month 🥳”</blockquote>
+          <figcaption class="mt-4 text-sm text-slate-400">— Ayesha Khan</figcaption>
+        </figure>
+        <!-- Testimonial 3 (From Image) -->
+        <figure class="rounded-2xl border border-white/10 p-6 bg-white/5">
+          <blockquote class="text-slate-200">“Didn’t think reels could actually make money but now I’m at $5K. Just followed the guide step by step. Let's gooo! 🚀”</blockquote>
+          <figcaption class="mt-4 text-sm text-slate-400">— Daniel</figcaption>
+        </figure>
+        <!-- Testimonial 4 (From Image) -->
+        <figure class="rounded-2xl border border-white/10 p-6 bg-white/5">
+          <blockquote class="text-slate-200">“Finally hit $4K — all thanks to the content system & bonus reel pack. I didn't even show my face once! 👀”</blockquote>
+          <figcaption class="mt-4 text-sm text-slate-400">— Max</figcaption>
+        </figure>
+        <!-- Testimonial 5 (Previously added) -->
+        <figure class="rounded-2xl border border-white/10 p-6 bg-white/5">
+          <blockquote class="text-slate-200">“This course is the real deal. After 6 weeks, my audience is growing, and I made my first $1,500 with affiliate links.”</blockquote>
+          <figcaption class="mt-4 text-sm text-slate-400">— Farhan Q.</figcaption>
+        </figure>
+        <!-- Testimonial 6 (Previously added) -->
+        <figure class="rounded-2xl border border-white/10 p-6 bg-white/5">
+          <blockquote class="text-slate-200">“Before this, I was lost. Now, I've got a step-by-step plan that helped me land my first $2,500 client from my Instagram leads.”</blockquote>
+          <figcaption class="mt-4 text-sm text-slate-400">— Sara M.</figcaption>
+        </figure>
+        <!-- New Testimonial 7 -->
+        <figure class="rounded-2xl border border-white/10 p-6 bg-white/5">
+          <blockquote class="text-slate-200">“The content prompts alone were worth the price. My engagement is at an all-time high, and I just crossed $800 in digital product sales.”</blockquote>
+          <figcaption class="mt-4 text-sm text-slate-400">— Ali R.</figcaption>
+        </figure>
+        <!-- New Testimonial 8 -->
+        <figure class="rounded-2xl border border-white/10 p-6 bg-white/5">
+          <blockquote class="text-slate-200">“I thought I knew all the tricks, but this system gave me a new blueprint. I went from 500 followers to 5K and made my first $500 in commissions.”</blockquote>
+          <figcaption class="mt-4 text-sm text-slate-400">— Sarah J.</figcaption>
+        </figure>
+        <!-- New Testimonial 9 -->
+        <figure class="rounded-2xl border border-white/10 p-6 bg-white/5">
+          <blockquote class="text-slate-200">“The support community is amazing. I got my first lead in just a few days and converted it into a $100 sale. This is just the beginning!”</blockquote>
+          <figcaption class="mt-4 text-sm text-slate-400">— Mark T.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+  <!-- Pricing -->
+  <section class="py-16 md:py-24 border-t border-white/10" id="pricing">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="grid lg:grid-cols-2 gap-8 items-center">
+        <div>
+          <h2 class="headline text-3xl md:text-4xl">Start Your Instagram Business Today</h2>
+          <p class="mt-3 text-slate-300">One-time payment. Lifetime access. Free updates.</p>
+          <ul class="mt-5 space-y-2 text-slate-300 text-sm">
+            <li class="flex gap-3"><span class="text-cyan-400">✔</span> Full Instaprofit System curriculum</li>
+            <li class="flex gap-3"><span class="text-cyan-400">✔</span>  Content,  Hooks, and  Courses</li>
+            <li class="flex gap-3"><span class="text-cyan-400">✔</span> Lifetime updates</li>
+            <li class="flex gap-3"><span class="text-cyan-400">✔</span>  7 day money-back guarantee</li>
+          </ul>
+        </div>
+        <div class="relative">
+          <div class="absolute -inset-3 rounded-3xl bg-gradient-to-tr from-cyan-500/20 to-blue-600/20 blur-2xl"></div>
+          <div class="relative rounded-3xl border border-white/10 bg-white/5 p-6">
+            <div class="flex items-baseline gap-3">
+              <span class="text-sm uppercase tracking-widest text-cyan-300">Launch Offer</span>
+            </div>
+            <div class="mt-2 flex items-end gap-3">
+              <span class="text-5xl font-extrabold">$14.99</span>
+              <span class="text-slate-400 line-through">$97</span>
+            </div>
+            <p class="mt-2 text-slate-300">Unlock 85% OFF when you get started today!</p>
+            <a id="checkout" href="PASTE YOUR AFFILIATES LINK HERE" class="mt-6 inline-flex w-full justify-center items-center gap-2 rounded-2xl bg-gradient-to-r from-cyan-500 to-blue-600 px-6 py-4 text-lg font-semibold text-slate-900 shadow-xl shadow-cyan-500/20">
+              Secure Checkout
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-5 h-5"><path fill="currentColor" d="M13 5l7 7-7 7v-4H4v-6h9V5z"/></svg>
+            </a>
+            <div class="mt-4 grid sm:grid-cols-3 gap-3 text-xs text-slate-300">
+              <div class="glass rounded-xl border border-white/10 p-3 text-center">🔒 Secure</div>
+              <div class="glass rounded-xl border border-white/10 p-3 text-center">⚡ Instant Access</div>
+              <div class="glass rounded-xl border border-white/10 p-3 text-center">♾️ Lifetime Updates</div>
+            </div>
+            <div class="mt-4 text-center text-xs text-slate-400">7-day money-back guarantee — no questions asked.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- FAQ -->
+  <section class="py-16 md:py-24" id="faq">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="headline text-3xl md:text-4xl text-center">Frequently Asked Questions</h2>
+      <div class="mt-10 space-y-3">
+        <details class="group rounded-2xl border border-white/10 bg-white/5 p-5">
+          <summary class="flex cursor-pointer list-none items-center justify-between font-semibold">Do I need prior experience?
+            <span class="transition group-open:rotate-45">➕</span>
+          </summary>
+          <p class="mt-3 text-slate-300">No. The Instaprofit System is beginner-friendly with step-by-step guidance.</p>
+        </details>
+        <details class="group rounded-2xl border border-white/10 bg-white/5 p-5">
+          <summary class="flex cursor-pointer list-none items-center justify-between font-semibold">How fast can I see results?
+            <span class="transition group-open:rotate-45">➕</span>
+          </summary>
+          <p class="mt-3 text-slate-300">Results vary by effort and niche, but many students see measurable growth within weeks.</p>
+        </details>
+        <details class="group rounded-2xl border border-white/10 bg-white/5 p-5">
+          <summary class="flex cursor-pointer list-none items-center justify-between font-semibold">Do I need a budget?
+            <span class="transition group-open:rotate-45">➕</span>
+          </summary>
+          <p class="mt-3 text-slate-300">No. The core system focuses on organic strategies and free tools.</p>
+        </details>
+        <details class="group rounded-2xl border border-white/10 bg-white/5 p-5">
+          <summary class="flex cursor-pointer list-none items-center justify-between font-semibold">Is there a refund policy?
+            <span class="transition group-open:rotate-45">➕</span>
+          </summary>
+          <p class="mt-3 text-slate-300">Yes. We offer a 7-day money-back guarantee if you’re not satisfied.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+  <!-- Footer -->
+  <footer class="border-t border-white/10">
+    <div class="max-w-6xl mx-auto px-4 py-10 grid sm:grid-cols-2 md:grid-cols-4 gap-6 text-sm">
+      <div>
+        <div class="headline text-lg">Instaprofit</div>
+        <p class="mt-2 text-slate-400">Grow, monetize, and scale your Instagram with a proven system.</p>
+      </div>
+      <div>
+        <div class="font-semibold text-slate-200">Links</div>
+        <ul class="mt-2 space-y-1">
+          <li><a href="#features" class="hover:underline">Features</a></li>
+          <li><a href="#curriculum" class="hover:underline">What You Get</a></li>
+          <li><a href="#pricing" class="hover:underline">Pricing</a></li>
+          <li><a href="#faq" class="hover:underline">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="font-semibold text-slate-200">Legal</div>
+        <ul class="mt-2 space-y-1">
+          <li><a href="Terms.html" class="hover:underline">Terms</a></li>
+          <li><a href="privacy.html" class="hover:underline">Privacy</a></li>
+          <li><a href="refund policy.html" class="hover:underline">Refund Policy</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="font-semibold text-slate-200">Get in touch</div>
+        <p class="mt-2 text-slate-400">theinstaprofitsystem@gmail.com</p>
+      </div>
+    </div>
+    <div class="text-center text-xs text-slate-500 pb-8">© <span id="year"></span> Instaprofit. All rights reserved.</div>
+  </footer>
+  <!-- Tiny helpers -->
+  <script>
+    // current year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Scarcity Timer Logic
+    // Set the end date for the countdown to 10 minutes from now
+    const endDate = new Date();
+    endDate.setMinutes(endDate.getMinutes() + 10);
+
+    // Update the countdown every 1 second
+    const countdown = setInterval(() => {
+      const now = new Date().getTime();
+      const distance = endDate.getTime() - now;
+
+      // Calculate hours, minutes and seconds
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      // Display the result
+      const countdownEl = document.getElementById('countdown');
+      countdownEl.innerHTML = `
+        <div class="box">
+          <div class="number">${String(hours).padStart(2, '0')}</div>
+          <div class="label">Hours</div>
+        </div>
+        <div class="box">
+          <div class="number">${String(minutes).padStart(2, '0')}</div>
+          <div class="label">Minutes</div>
+        </div>
+        <div class="box">
+          <div class="number">${String(seconds).padStart(2, '0')}</div>
+          <div class="label">Seconds</div>
+        </div>
+      `;
+
+      // If the countdown is finished, write some text
+      if (distance < 0) {
+        clearInterval(countdown);
+        countdownEl.innerHTML = `<span class="text-red-400">Offer Expired!</span>`;
+      }
+    }, 1000);
+  </script>
+</body>
+</html>
